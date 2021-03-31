@@ -26,5 +26,13 @@ yarn
 ```bash
 yarn start
 ```
+
+## Deployment
+We use Nelify for static site hosting
+```
+npm install netlify-cli -g
+netlify login
+netlify deploy
+```
 ## Attribution
 This code was adapted from this Uniswap repo: [uniswap-interface](https://github.com/Uniswap/uniswap-interface).
