@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 pragma solidity ^0.8.0;
 /**
- *  Contract for administering the Airdrop of RIP.
- *  500,000 RIP will be made available via the Airdrop.
+ *  Contract for administering the Survey of RIP.
+ *  20,000 RIP will be made available to 20 people who complete the Survey
  */
-contract Airdrop {
+contract Survey {
     // token addresses
     address public rip;
     address public owner;
@@ -18,7 +18,7 @@ contract Airdrop {
     bool public claimingAllowed;
     
     // Giving away 500,000 rip
-    uint constant public TOTAL_AIRDROP_SUPPLY = 116_000e18;
+    uint constant public TOTAL_AIRDROP_SUPPLY = 100_000e18;
 
     // Events
     event ClaimingAllowed();

@@ -75,6 +75,11 @@ export const AIRDROP_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.AVALANCHE]: '0x0C58C2041da4CfCcF5818Bbe3b66DBC23B3902d9'
 }
 
+export const SURVEY_ADDRESS: { [chainId in ChainId]?: string } = {
+  [ChainId.FUJI]: '0xf07B814D0b95042D9B16faf13DE6D67e7488dBB6',
+  [ChainId.AVALANCHE]: '0x0C58C2041da4CfCcF5818Bbe3b66DBC23B3902d9'
+}
+
 const WAVAX_ONLY: ChainTokenList = {
   [ChainId.FUJI]: [WAVAX[ChainId.FUJI]],
   [ChainId.AVALANCHE]: [WAVAX[ChainId.AVALANCHE]]

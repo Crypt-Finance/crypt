@@ -13,7 +13,7 @@ import { MULTICALL_ABI, MULTICALL_NETWORKS } from '../constants/multicall'
 import { V1_EXCHANGE_ABI, V1_FACTORY_ABI, V1_FACTORY_ADDRESSES } from '../constants/v1'
 import { getContract } from '../utils'
 import { useActiveWeb3React } from './index'
-import { AIRDROP_ADDRESS } from '../constants'
+import { AIRDROP_ADDRESS, SURVEY_ADDRESS } from '../constants'
 
 // returns null on errors
 function useContract(address: string | undefined, ABI: any, withSignerIfPossible = true): Contract | null {
@@ -76,4 +76,9 @@ export function useStakingContract(stakingAddress?: string, withSignerIfPossible
 export function useAirdropContract(): Contract | null {
   const { chainId } = useActiveWeb3React()
   return useContract(chainId ? AIRDROP_ADDRESS[chainId] : undefined, AIRDROP_ABI, true)
+}
+
+export function useSurveyContract(): Contract | null {
+  const { chainId } = useActiveWeb3React()
+  return useContract(chainId ? SURVEY_ADDRESS[chainId] : undefined, AIRDROP_ABI, true)
 }
